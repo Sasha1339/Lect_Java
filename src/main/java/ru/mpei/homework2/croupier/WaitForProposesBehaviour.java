@@ -10,7 +10,7 @@ import ru.mpei.homework2.croupier.helper.behaviour.WhoIsWinner;
 
 /**
  * параллельное поведение ожидания ставок
- * (продоллжение последует, если хотя бы 1 поставил)
+ * (продолжение последует, если хотя бы 1 поставил)
  */
 @Slf4j
 public class WaitForProposesBehaviour extends ParallelBehaviour {
@@ -31,18 +31,18 @@ public class WaitForProposesBehaviour extends ParallelBehaviour {
     @Override
     public int onEnd() {
         if (receiveBeh.done() && whoIsWinner.getBet() > -1){
-            log.info(myAgent.getLocalName()+": Received all proposes, winner is "+whoIsWinner.getNameWinner());
-            myAgent.addBehaviour(new SendContractBehaviour(whoIsWinner.getNameWinner()));
+            log.info(myAgent.getLocalName()+": Received all proposes, winner is "+whoIsWinner.getNameLocalWinner());
+            myAgent.addBehaviour(new SendContractBehaviour(whoIsWinner.getNameWinner(), whoIsWinner.getNameLocalWinner()));
         }else{
             if (whoIsWinner.getCount() >= 1 && whoIsWinner.getBet() > -1) {
-                log.info(myAgent.getLocalName() + ": Time is up! Received not all proposes, winner is " + whoIsWinner.getNameWinner());
-                myAgent.addBehaviour(new SendContractBehaviour(whoIsWinner.getNameWinner()));
+                log.info(myAgent.getLocalName() + ": Time is up! Received not all proposes, winner is " + whoIsWinner.getNameLocalWinner());
+                myAgent.addBehaviour(new SendContractBehaviour(whoIsWinner.getNameWinner(), whoIsWinner.getNameLocalWinner()));
             }else if (whoIsWinner.getBet() < 0){
                 log.warn(myAgent.getLocalName() + ": Absent need bet more 0");
-                myAgent.addBehaviour(new FailBehaviour());
+                myAgent.addBehaviour(new FailBehaviour("Auction was failed"));
             }else{
                 log.warn(myAgent.getLocalName() + ": Time is up!");
-                myAgent.addBehaviour(new FailBehaviour());
+                myAgent.addBehaviour(new FailBehaviour("Auction was failed!"));
             }
 
         }

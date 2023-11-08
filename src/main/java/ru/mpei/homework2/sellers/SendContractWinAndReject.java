@@ -8,6 +8,9 @@ import ru.mpei.homework2.AgentService;
 
 import java.util.List;
 
+/**
+ * повдение отказа от контракта
+ */
 @Slf4j
 public class SendContractWinAndReject extends OneShotBehaviour {
 

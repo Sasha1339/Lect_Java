@@ -1,1 +1,1 @@
-http://169.254.25.117:7778/acc
+http://LAPTOP-BD7QOUC4:7778/acc

@@ -4,10 +4,11 @@ import jade.core.behaviours.Behaviour;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 
+/**
+ * поведения ожидания отказа предложения
+ */
 public class WaitForContractYouLose  extends Behaviour {
-
     boolean isDone = false;
-
     @Override
     public void action() {
         ACLMessage losMessage = myAgent.receive(MessageTemplate.MatchPerformative(ACLMessage.REJECT_PROPOSAL));
@@ -20,7 +21,6 @@ public class WaitForContractYouLose  extends Behaviour {
         }
 
     }
-
     @Override
     public boolean done() {
         return isDone;

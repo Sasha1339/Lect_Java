@@ -5,6 +5,9 @@ import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 import ru.mpei.homework2.AgentService;
 
+/**
+ * поведение для регистрации победителя в ставках
+ */
 public class WaitAnswerBehaviour extends Behaviour {
 
     private WhoIsWinner whoIsWinner;
@@ -19,6 +22,7 @@ public class WaitAnswerBehaviour extends Behaviour {
             if (newBet > whoIsWinner.getBet()){
                 whoIsWinner.setBet(newBet);
                 whoIsWinner.setNameWinner(message.getSender().getName());
+                whoIsWinner.setNameLocalWinner(message.getSender().getLocalName());
             }
             whoIsWinner.setCount(whoIsWinner.getCount()+1);
         }else {

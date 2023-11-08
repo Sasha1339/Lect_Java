@@ -3,7 +3,10 @@ package ru.mpei.homework2.sellers.helper.behaviour;
 import jade.core.behaviours.Behaviour;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
-import ru.mpei.homework2.sellers.helper.behaviour.InfoCroupier;
+
+/**
+ * поведение ожидания принятия предложенной ставки
+ */
 
 public class WaitForContractYouWin extends Behaviour {
 

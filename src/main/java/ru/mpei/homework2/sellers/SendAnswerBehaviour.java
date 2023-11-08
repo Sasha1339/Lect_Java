@@ -8,9 +8,11 @@ import ru.mpei.homework2.AgentService;
 
 import java.util.List;
 
+/**
+ * поведение отправки ставки
+ */
 @Slf4j
 public class SendAnswerBehaviour extends OneShotBehaviour {
-
     int bet;
     String nameCroupier;
 
@@ -18,7 +20,6 @@ public class SendAnswerBehaviour extends OneShotBehaviour {
         this.bet = bet;
         this.nameCroupier = nameCroupier;
     }
-
     @Override
     public void action() {
 

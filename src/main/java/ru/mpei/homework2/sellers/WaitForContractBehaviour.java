@@ -9,6 +9,9 @@ import ru.mpei.homework2.sellers.helper.behaviour.InfoCroupier;
 import ru.mpei.homework2.sellers.helper.behaviour.WaitForContractYouLose;
 import ru.mpei.homework2.sellers.helper.behaviour.WaitForContractYouWin;
 
+/**
+ * поведение паралллельное ожидания контракта и решения о дальнейшем его принятии
+ */
 @Slf4j
 public class WaitForContractBehaviour extends ParallelBehaviour {
 
@@ -23,7 +26,7 @@ public class WaitForContractBehaviour extends ParallelBehaviour {
     public void onStart() {
         receiveBehWin = new WaitForContractYouWin(infoCroupier);
         receiveBehLose = new WaitForContractYouLose();
-        wakerBeh = new WaitBehaviour(myAgent, 20000);
+        wakerBeh = new WaitBehaviour(myAgent, 15000);
         this.addSubBehaviour(receiveBehWin);
         this.addSubBehaviour(receiveBehLose);
         this.addSubBehaviour(wakerBeh);
@@ -31,8 +34,6 @@ public class WaitForContractBehaviour extends ParallelBehaviour {
 
     @Override
     public int onEnd() {
-
-
         if (receiveBehWin.done()){
             int choice = (int)(Math.random() * 3);
             switch (choice){
@@ -41,17 +42,14 @@ public class WaitForContractBehaviour extends ParallelBehaviour {
                 break;
                 case 1: // reject
                         myAgent.addBehaviour(new SendContractWinAndReject(infoCroupier.getNameCroupier()));
-
                 break;
                 case 2:
-                    log.warn(myAgent.getLocalName()+ ": I ignore!");
+                    log.warn(myAgent.getLocalName()+ ": I'm ignore!");
                 break;
             }
         }else{
-            myAgent.addBehaviour(new FailBehaviour());
+            myAgent.addBehaviour(new FailBehaviour("I was failed auction"));
         }
-
-
         return 0;
     }
 

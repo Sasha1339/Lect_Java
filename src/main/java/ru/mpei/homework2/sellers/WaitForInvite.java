@@ -4,8 +4,11 @@ import jade.core.behaviours.Behaviour;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 import lombok.extern.slf4j.Slf4j;
-import ru.mpei.homework2.sellers.SendAnswerBehaviour;
 
+
+/**
+ * поведение ожидающее начала аукциона и формирования ставки
+ */
 @Slf4j
 public class WaitForInvite extends Behaviour {
     @Override
@@ -29,7 +32,7 @@ public class WaitForInvite extends Behaviour {
                 break;
                 case 2:
                 {
-                    log.info("I dont wont proposes!");
+                    log.info(myAgent.getLocalName()+": I dont wont proposes!");
                 }
                 break;
             }

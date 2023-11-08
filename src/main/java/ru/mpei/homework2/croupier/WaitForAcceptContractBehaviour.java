@@ -9,6 +9,10 @@ import ru.mpei.homework2.croupier.helper.behaviour.WaitAnswerContractAndReject;
 import ru.mpei.homework2.croupier.helper.behaviour.WaitAnswerContractBehaviour;
 import ru.mpei.homework2.croupier.helper.behaviour.WaitBehaviour;
 
+
+/**
+ * параллльеное поведение, ожидания подтверждения контракта
+ */
 @Slf4j
 public class WaitForAcceptContractBehaviour extends ParallelBehaviour {
 
@@ -31,7 +35,7 @@ public class WaitForAcceptContractBehaviour extends ParallelBehaviour {
         if (receiveBeh.done()){
             myAgent.addBehaviour(new SuccessBehaviour());
         }else{
-            myAgent.addBehaviour(new FailBehaviour());
+            myAgent.addBehaviour(new FailBehaviour("Auction was failed!"));
         }
         return 0;
     }

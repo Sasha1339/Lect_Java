@@ -4,6 +4,10 @@ import jade.core.behaviours.Behaviour;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 
+
+/**
+ * поведение отлавливания согласия на контракт
+ */
 public class WaitAnswerContractBehaviour extends Behaviour {
 
     private boolean isDone = false;

@@ -8,13 +8,18 @@ import ru.mpei.homework2.AgentService;
 
 import java.util.List;
 
+/**
+ * повение для отправки контракта победителю
+ */
 @Slf4j
 public class SendContractBehaviour extends OneShotBehaviour {
 
     private String nameWinner;
+    private String nameLocal;
 
-    public SendContractBehaviour(String nameWinner) {
+    public SendContractBehaviour(String nameWinner, String nameLocal) {
         this.nameWinner = nameWinner;
+        this.nameLocal = nameLocal;
     }
 
     @Override
@@ -34,7 +39,7 @@ public class SendContractBehaviour extends OneShotBehaviour {
                 .forEach(aid -> messageFail.addReceiver(aid));
 
         messageWinner.setContent("You win! Give me contract");
-        log.info(myAgent.getLocalName()+": "+nameWinner+" you win!");
+        log.info(myAgent.getLocalName()+": "+nameLocal+" you win!");
         messageFail.setContent("You lose! You lohonulsya!");
         myAgent.send(messageWinner);
         myAgent.send(messageFail);

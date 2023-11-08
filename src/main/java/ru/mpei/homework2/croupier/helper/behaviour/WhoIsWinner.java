@@ -7,16 +7,13 @@ import lombok.Data;
  */
 @Data
 public class WhoIsWinner {
-
     public WhoIsWinner() {
         this.count = 0;
         this.bet = -1;
     }
-
     private int count;
-
     private double bet;
-
     private String nameWinner = "";
+    private String nameLocalWinner = "";
 
 }
