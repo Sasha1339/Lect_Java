@@ -22,7 +22,7 @@ public class SendAnswerBehaviour extends OneShotBehaviour {
     }
     @Override
     public void action() {
-
+        System.out.println("Z dksdvs");
         ACLMessage sendMessage = new ACLMessage(ACLMessage.REQUEST);
         List<AID> aids = AgentService.findAgents(myAgent, "Auction");
 
@@ -30,9 +30,38 @@ public class SendAnswerBehaviour extends OneShotBehaviour {
                 .filter(aid -> aid.getName().equals(nameCroupier))
                 .forEach(aid -> sendMessage.addReceiver(aid));
 
-        sendMessage.setContent(String.valueOf(bet));
-        log.info(myAgent.getLocalName()+": my Bet = "+bet);
-        myAgent.send(sendMessage);
+
+
+        int choice = (int)(Math.random() * 3);
+        System.out.println(choice);
+        switch (choice){
+            case 0:
+            {
+                bet = (int) (Math.random() * 500);
+                sendMessage.setContent(String.valueOf(bet));
+                log.info(myAgent.getLocalName()+": my Bet = "+bet);
+                myAgent.send(sendMessage);
+                //myAgent.addBehaviour(new SendAnswerBehaviour(bet, message.getSender().getName()));
+
+            }
+            break;
+            case 1:
+            {
+                bet = ((int) (Math.random() * 500)) * -1;
+                sendMessage.setContent(String.valueOf(bet));
+                log.info(myAgent.getLocalName()+": my Bet = "+bet);
+                myAgent.send(sendMessage);
+                //myAgent.addBehaviour(new SendAnswerBehaviour(bet, message.getSender().getName()));
+            }
+            break;
+            case 2:
+            {
+                log.info(myAgent.getLocalName()+": I dont wont proposes!");
+            }
+            break;
+        }
+
+
 
     }
 }

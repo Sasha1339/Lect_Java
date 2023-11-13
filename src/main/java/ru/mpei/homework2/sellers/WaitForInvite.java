@@ -4,6 +4,7 @@ import jade.core.behaviours.Behaviour;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 import lombok.extern.slf4j.Slf4j;
+import ru.mpei.homework2.sellers.helper.behaviour.InfoCroupier;
 
 
 /**
@@ -11,36 +12,25 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class WaitForInvite extends Behaviour {
+
+    private int number;
+    private InfoCroupier infoCroupier;
+
+    public WaitForInvite(InfoCroupier infoCroupier) {
+        this.infoCroupier = infoCroupier;
+    }
+
     @Override
     public void action() {
         ACLMessage message = myAgent.receive(MessageTemplate.MatchPerformative(ACLMessage.INFORM));
         if (message != null){
-            int choice = (int)(Math.random() * 3);
-            int bet;
-            switch (choice){
-                case 0:
-                {
-                    bet = (int) (Math.random() * 500);
-                    myAgent.addBehaviour(new SendAnswerBehaviour(bet, message.getSender().getName()));
-                }
-                break;
-                case 1:
-                {
-                    bet = ((int) (Math.random() * 500)) * -1;
-                    myAgent.addBehaviour(new SendAnswerBehaviour(bet, message.getSender().getName()));
-                }
-                break;
-                case 2:
-                {
-                    log.info(myAgent.getLocalName()+": I dont wont proposes!");
-                }
-                break;
-            }
-
+            infoCroupier.setNameCroupier(message.getSender().getName());
+            log.info("I'm understand!");
         }else {
             block();
         }
     }
+
 
     @Override
     public boolean done() {

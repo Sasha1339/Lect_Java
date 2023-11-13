@@ -1,4 +1,4 @@
-package ru.mpei.homework2.sellers.helper.behaviour;
+package ru.mpei.homework2_2.sellers.helper.behaviour;
 
 import lombok.Data;
 
@@ -9,7 +9,6 @@ import lombok.Data;
 @Data
 public class InfoCroupier {
 
-    private int bet;
     private String nameCroupier;
 
 }

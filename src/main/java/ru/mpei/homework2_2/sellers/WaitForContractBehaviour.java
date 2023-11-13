@@ -1,13 +1,13 @@
-package ru.mpei.homework2.sellers;
+package ru.mpei.homework2_2.sellers;
 
 import jade.core.behaviours.Behaviour;
 import jade.core.behaviours.ParallelBehaviour;
 import lombok.extern.slf4j.Slf4j;
-import ru.mpei.homework2.FailBehaviour;
-import ru.mpei.homework2.croupier.helper.behaviour.WaitBehaviour;
-import ru.mpei.homework2.sellers.helper.behaviour.InfoCroupier;
-import ru.mpei.homework2.sellers.helper.behaviour.WaitForContractYouLose;
-import ru.mpei.homework2.sellers.helper.behaviour.WaitForContractYouWin;
+import ru.mpei.homework2_2.FailBehaviour;
+import ru.mpei.homework2_2.croupier.helper.behaviour.WaitBehaviour;
+import ru.mpei.homework2_2.sellers.helper.behaviour.InfoCroupier;
+import ru.mpei.homework2_2.sellers.helper.behaviour.WaitForContractYouLose;
+import ru.mpei.homework2_2.sellers.helper.behaviour.WaitForContractYouWin;
 
 /**
  * поведение паралллельное ожидания контракта и решения о дальнейшем его принятии
@@ -38,18 +38,17 @@ public class WaitForContractBehaviour extends ParallelBehaviour {
             int choice = (int)(Math.random() * 3);
             switch (choice){
                 case 0: // agree
-                        //myAgent.addBehaviour(new SendContractYouWin(infoCroupier.getNameCroupier()));
-                    return 0;
+                        myAgent.addBehaviour(new SendContractYouWin(infoCroupier.getNameCroupier()));
+                break;
                 case 1: // reject
-                        //myAgent.addBehaviour(new SendContractWinAndReject(infoCroupier.getNameCroupier()));
-                    return 1;
+                        myAgent.addBehaviour(new SendContractWinAndReject(infoCroupier.getNameCroupier()));
+                break;
                 case 2:
                     log.warn(myAgent.getLocalName()+ ": I'm ignore!");
-                    return 2;
+                break;
             }
         }else{
-            //myAgent.addBehaviour(new FailBehaviour("I was failed auction"));
-            return 3;
+            myAgent.addBehaviour(new FailBehaviour("I was failed auction"));
         }
         return 0;
     }

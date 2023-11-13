@@ -9,3 +9,138 @@
 08.нояб..2023 12:14:13.413 [SellerOne] INFO  r.m.h.FailBehaviour - SellerOne: I was failed auction
 08.нояб..2023 12:14:13.417 [SellerTwo] WARN  r.m.h.s.SendContractYouWin - SellerTwo: I agree!
 08.нояб..2023 12:14:13.418 [Croupier] INFO  r.m.h.SuccessBehaviour - Croupier: Auction was successful
+10.нояб..2023 12:07:52.612 [SellerTwo] INFO  r.m.h.FunctionAgent - SellerTwo: I was born
+10.нояб..2023 12:07:52.612 [Croupier] INFO  r.m.h.FunctionAgent - Croupier: I was born
+10.нояб..2023 12:07:52.612 [SellerOne] INFO  r.m.h.FunctionAgent - SellerOne: I was born
+10.нояб..2023 12:07:52.648 [Croupier] INFO  r.m.h.c.StartAuctionBehaviour - Auction was Started!
+10.нояб..2023 12:07:52.649 [SellerTwo] INFO  r.m.h.s.WaitForInvite - SellerTwo: I dont wont proposes!
+10.нояб..2023 12:08:02.651 [Croupier] WARN  r.m.h.c.WaitForProposesBehaviour - Croupier: Absent need bet more 0
+10.нояб..2023 12:08:02.652 [Croupier] INFO  r.m.h.FailBehaviour - Croupier: Auction was failed
+10.нояб..2023 12:08:30.342 [SellerTwo] INFO  r.m.h.FunctionAgent - SellerTwo: I was born
+10.нояб..2023 12:08:30.342 [SellerOne] INFO  r.m.h.FunctionAgent - SellerOne: I was born
+10.нояб..2023 12:08:30.342 [Croupier] INFO  r.m.h.FunctionAgent - Croupier: I was born
+10.нояб..2023 12:08:30.368 [Croupier] INFO  r.m.h.c.StartAuctionBehaviour - Auction was Started!
+10.нояб..2023 12:08:30.368 [SellerTwo] INFO  r.m.h.s.WaitForInvite - SellerTwo: I dont wont proposes!
+10.нояб..2023 12:08:30.368 [SellerOne] INFO  r.m.h.s.WaitForInvite - SellerOne: I dont wont proposes!
+10.нояб..2023 12:08:40.371 [Croupier] WARN  r.m.h.c.WaitForProposesBehaviour - Croupier: Absent need bet more 0
+10.нояб..2023 12:08:40.372 [Croupier] INFO  r.m.h.FailBehaviour - Croupier: Auction was failed
+10.нояб..2023 12:09:15.485 [SellerOne] INFO  r.m.h.FunctionAgent - SellerOne: I was born
+10.нояб..2023 12:09:15.485 [Croupier] INFO  r.m.h.FunctionAgent - Croupier: I was born
+10.нояб..2023 12:09:15.485 [SellerTwo] INFO  r.m.h.FunctionAgent - SellerTwo: I was born
+10.нояб..2023 12:09:15.509 [Croupier] INFO  r.m.h.c.StartAuctionBehaviour - Auction was Started!
+10.нояб..2023 12:09:25.512 [Croupier] WARN  r.m.h.c.WaitForProposesBehaviour - Croupier: Absent need bet more 0
+10.нояб..2023 12:09:25.512 [Croupier] INFO  r.m.h.FailBehaviour - Croupier: Auction was failed
+10.нояб..2023 12:09:39.695 [SellerOne] INFO  r.m.h.FunctionAgent - SellerOne: I was born
+10.нояб..2023 12:09:39.695 [Croupier] INFO  r.m.h.FunctionAgent - Croupier: I was born
+10.нояб..2023 12:09:39.695 [SellerTwo] INFO  r.m.h.FunctionAgent - SellerTwo: I was born
+10.нояб..2023 12:09:39.723 [Croupier] INFO  r.m.h.c.StartAuctionBehaviour - Auction was Started!
+10.нояб..2023 12:09:39.723 [SellerOne] INFO  r.m.h.s.WaitForInvite - SellerOne: I dont wont proposes!
+10.нояб..2023 12:09:49.725 [Croupier] WARN  r.m.h.c.WaitForProposesBehaviour - Croupier: Absent need bet more 0
+10.нояб..2023 12:09:49.726 [Croupier] INFO  r.m.h.FailBehaviour - Croupier: Auction was failed
+10.нояб..2023 12:10:37.134 [SellerOne] INFO  r.m.h.FunctionAgent - SellerOne: I was born
+10.нояб..2023 12:10:37.134 [SellerTwo] INFO  r.m.h.FunctionAgent - SellerTwo: I was born
+10.нояб..2023 12:10:37.134 [Croupier] INFO  r.m.h.FunctionAgent - Croupier: I was born
+10.нояб..2023 12:10:37.162 [Croupier] INFO  r.m.h.c.StartAuctionBehaviour - Auction was Started!
+10.нояб..2023 12:10:47.165 [Croupier] WARN  r.m.h.c.WaitForProposesBehaviour - Croupier: Absent need bet more 0
+10.нояб..2023 12:10:47.166 [Croupier] INFO  r.m.h.FailBehaviour - Croupier: Auction was failed
+10.нояб..2023 12:12:35.179 [Croupier] INFO  r.m.h.FunctionAgent - Croupier: I was born
+10.нояб..2023 12:12:35.179 [SellerTwo] INFO  r.m.h.FunctionAgent - SellerTwo: I was born
+10.нояб..2023 12:12:35.179 [SellerOne] INFO  r.m.h.FunctionAgent - SellerOne: I was born
+10.нояб..2023 12:12:35.204 [Croupier] INFO  r.m.h.c.StartAuctionBehaviour - Auction was Started!
+10.нояб..2023 12:12:35.204 [SellerOne] INFO  r.m.h.s.WaitForInvite - SellerOne: I dont wont proposes!
+10.нояб..2023 12:12:35.204 [SellerTwo] INFO  r.m.h.s.WaitForInvite - SellerTwo: I dont wont proposes!
+10.нояб..2023 12:12:45.206 [Croupier] WARN  r.m.h.c.WaitForProposesBehaviour - Croupier: Absent need bet more 0
+10.нояб..2023 12:12:45.207 [Croupier] INFO  r.m.h.FailBehaviour - Croupier: Auction was failed
+10.нояб..2023 12:12:45.219 [Croupier] INFO  r.m.h.FailBehaviour - Croupier: Auction was failed!
+10.нояб..2023 12:12:56.811 [SellerOne] INFO  r.m.h.FunctionAgent - SellerOne: I was born
+10.нояб..2023 12:12:56.811 [SellerTwo] INFO  r.m.h.FunctionAgent - SellerTwo: I was born
+10.нояб..2023 12:12:56.811 [Croupier] INFO  r.m.h.FunctionAgent - Croupier: I was born
+10.нояб..2023 12:12:56.834 [Croupier] INFO  r.m.h.c.StartAuctionBehaviour - Auction was Started!
+10.нояб..2023 12:12:56.846 [SellerOne] INFO  r.m.h.s.SendAnswerBehaviour - SellerOne: my Bet = 117
+10.нояб..2023 12:12:56.848 [SellerTwo] INFO  r.m.h.s.SendAnswerBehaviour - SellerTwo: my Bet = -469
+10.нояб..2023 12:12:56.859 [Croupier] INFO  r.m.h.c.WaitForProposesBehaviour - Croupier: Received all proposes, winner is SellerOne
+10.нояб..2023 12:12:56.868 [Croupier] INFO  r.m.h.c.SendContractBehaviour - Croupier: SellerOne you win!
+10.нояб..2023 12:12:56.870 [SellerTwo] INFO  r.m.h.FailBehaviour - SellerTwo: I was failed auction
+10.нояб..2023 12:12:56.873 [SellerOne] WARN  r.m.h.s.SendContractYouWin - SellerOne: I agree!
+10.нояб..2023 12:12:56.876 [Croupier] INFO  r.m.h.SuccessBehaviour - Croupier: Auction was successful
+10.нояб..2023 12:14:32.371 [SellerTwo] INFO  r.m.h.FunctionAgent - SellerTwo: I was born
+10.нояб..2023 12:14:32.371 [Croupier] INFO  r.m.h.FunctionAgent - Croupier: I was born
+10.нояб..2023 12:14:32.371 [SellerOne] INFO  r.m.h.FunctionAgent - SellerOne: I was born
+10.нояб..2023 12:14:32.395 [Croupier] INFO  r.m.h.c.StartAuctionBehaviour - Auction was Started!
+10.нояб..2023 12:14:42.398 [Croupier] WARN  r.m.h.c.WaitForProposesBehaviour - Croupier: Absent need bet more 0
+10.нояб..2023 12:14:42.399 [Croupier] INFO  r.m.h.FailBehaviour - Croupier: Auction was failed
+10.нояб..2023 12:19:11.018 [SellerTwo] INFO  r.m.h.FunctionAgent - SellerTwo: I was born
+10.нояб..2023 12:19:11.018 [Croupier] INFO  r.m.h.FunctionAgent - Croupier: I was born
+10.нояб..2023 12:19:11.018 [SellerOne] INFO  r.m.h.FunctionAgent - SellerOne: I was born
+10.нояб..2023 12:19:11.049 [Croupier] INFO  r.m.h.c.StartAuctionBehaviour - Auction was Started!
+10.нояб..2023 12:19:11.050 [SellerTwo] INFO  r.m.h.s.WaitForInvite - SellerTwo: I dont wont proposes!
+10.нояб..2023 12:19:21.051 [Croupier] WARN  r.m.h.c.WaitForProposesBehaviour - Croupier: Absent need bet more 0
+10.нояб..2023 12:19:21.052 [Croupier] INFO  r.m.h.FailBehaviour - Croupier: Auction was failed
+10.нояб..2023 12:23:20.872 [SellerTwo] INFO  r.m.h.FunctionAgent - SellerTwo: I was born
+10.нояб..2023 12:23:20.872 [Croupier] INFO  r.m.h.FunctionAgent - Croupier: I was born
+10.нояб..2023 12:23:20.872 [SellerOne] INFO  r.m.h.FunctionAgent - SellerOne: I was born
+10.нояб..2023 12:23:20.904 [Croupier] INFO  r.m.h.c.StartAuctionBehaviour - Auction was Started!
+10.нояб..2023 12:23:30.907 [Croupier] WARN  r.m.h.c.WaitForProposesBehaviour - Croupier: Absent need bet more 0
+10.нояб..2023 12:23:30.908 [Croupier] INFO  r.m.h.FailBehaviour - Croupier: Auction was failed
+10.нояб..2023 12:25:58.124 [SellerTwo] INFO  r.m.h.FunctionAgent - SellerTwo: I was born
+10.нояб..2023 12:25:58.124 [Croupier] INFO  r.m.h.FunctionAgent - Croupier: I was born
+10.нояб..2023 12:25:58.124 [SellerOne] INFO  r.m.h.FunctionAgent - SellerOne: I was born
+10.нояб..2023 12:25:58.151 [Croupier] INFO  r.m.h.c.StartAuctionBehaviour - Auction was Started!
+10.нояб..2023 12:25:58.152 [SellerOne] INFO  r.m.h.s.WaitForInvite - I'm understand!
+10.нояб..2023 12:25:58.152 [SellerTwo] INFO  r.m.h.s.WaitForInvite - I'm understand!
+10.нояб..2023 12:26:08.154 [Croupier] WARN  r.m.h.c.WaitForProposesBehaviour - Croupier: Absent need bet more 0
+10.нояб..2023 12:26:08.155 [Croupier] INFO  r.m.h.FailBehaviour - Croupier: Auction was failed
+10.нояб..2023 15:46:20.169 [SellerTwo] INFO  r.m.h.FunctionAgent - SellerTwo: I was born
+10.нояб..2023 15:46:20.169 [SellerOne] INFO  r.m.h.FunctionAgent - SellerOne: I was born
+10.нояб..2023 15:46:20.169 [Croupier] INFO  r.m.h.FunctionAgent - Croupier: I was born
+10.нояб..2023 15:46:20.204 [Croupier] INFO  r.m.h.c.StartAuctionBehaviour - Auction was Started!
+10.нояб..2023 15:46:20.213 [SellerOne] INFO  r.m.h.s.SendAnswerBehaviour - SellerOne: my Bet = -98
+10.нояб..2023 15:46:20.216 [SellerTwo] INFO  r.m.h.s.SendAnswerBehaviour - SellerTwo: my Bet = 132
+10.нояб..2023 15:46:20.228 [Croupier] INFO  r.m.h.c.WaitForProposesBehaviour - Croupier: Received all proposes, winner is SellerTwo
+10.нояб..2023 15:46:20.239 [Croupier] INFO  r.m.h.c.SendContractBehaviour - Croupier: SellerTwo you win!
+10.нояб..2023 15:46:20.240 [SellerTwo] WARN  r.m.h.s.WaitForContractBehaviour - SellerTwo: I'm ignore!
+10.нояб..2023 15:46:20.241 [SellerOne] INFO  r.m.h.FailBehaviour - SellerOne: I was failed auction
+10.нояб..2023 15:46:30.225 [Croupier] INFO  r.m.h.FailBehaviour - Croupier: Auction was failed!
+10.нояб..2023 15:47:54.722 [SellerOne] INFO  r.m.h.FunctionAgent - SellerOne: I was born
+10.нояб..2023 15:47:54.722 [Croupier] INFO  r.m.h.FunctionAgent - Croupier: I was born
+10.нояб..2023 15:47:54.722 [SellerTwo] INFO  r.m.h.FunctionAgent - SellerTwo: I was born
+10.нояб..2023 15:47:54.747 [Croupier] INFO  r.m.h.c.StartAuctionBehaviour - Auction was Started!
+10.нояб..2023 15:47:54.748 [SellerTwo] INFO  r.m.h.s.WaitForInvite - SellerTwo: I dont wont proposes!
+10.нояб..2023 15:47:54.748 [SellerOne] INFO  r.m.h.s.WaitForInvite - SellerOne: I dont wont proposes!
+10.нояб..2023 15:48:04.751 [Croupier] WARN  r.m.h.c.WaitForProposesBehaviour - Croupier: Absent need bet more 0
+10.нояб..2023 15:48:04.752 [Croupier] INFO  r.m.h.FailBehaviour - Croupier: Auction was failed
+10.нояб..2023 15:48:04.758 [Croupier] INFO  r.m.h.FailBehaviour - Croupier: Auction was failed!
+10.нояб..2023 15:48:09.745 [SellerTwo] INFO  r.m.h.FailBehaviour - SellerTwo: I was failed auction
+10.нояб..2023 15:48:09.745 [SellerOne] INFO  r.m.h.FailBehaviour - SellerOne: I was failed auction
+10.нояб..2023 15:48:48.863 [SellerOne] INFO  r.m.h.FunctionAgent - SellerOne: I was born
+10.нояб..2023 15:48:48.863 [Croupier] INFO  r.m.h.FunctionAgent - Croupier: I was born
+10.нояб..2023 15:48:48.863 [SellerTwo] INFO  r.m.h.FunctionAgent - SellerTwo: I was born
+10.нояб..2023 15:48:48.900 [Croupier] INFO  r.m.h.c.StartAuctionBehaviour - Auction was Started!
+10.нояб..2023 15:48:48.901 [SellerOne] INFO  r.m.h.s.WaitForInvite - I'm understand!
+10.нояб..2023 15:48:48.901 [SellerTwo] INFO  r.m.h.s.WaitForInvite - I'm understand!
+10.нояб..2023 15:49:10.227 [SellerOne] INFO  r.m.h.FunctionAgent - SellerOne: I was born
+10.нояб..2023 15:49:10.227 [Croupier] INFO  r.m.h.FunctionAgent - Croupier: I was born
+10.нояб..2023 15:49:10.227 [SellerTwo] INFO  r.m.h.FunctionAgent - SellerTwo: I was born
+10.нояб..2023 15:49:10.257 [Croupier] INFO  r.m.h.c.StartAuctionBehaviour - Auction was Started!
+10.нояб..2023 15:49:10.258 [SellerOne] INFO  r.m.h.s.WaitForInvite - SellerOne: I dont wont proposes!
+10.нояб..2023 15:49:10.267 [SellerTwo] INFO  r.m.h.s.SendAnswerBehaviour - SellerTwo: my Bet = -299
+10.нояб..2023 15:49:20.260 [Croupier] WARN  r.m.h.c.WaitForProposesBehaviour - Croupier: Absent need bet more 0
+10.нояб..2023 15:49:20.261 [Croupier] INFO  r.m.h.FailBehaviour - Croupier: Auction was failed
+10.нояб..2023 15:49:20.274 [Croupier] INFO  r.m.h.FailBehaviour - Croupier: Auction was failed!
+10.нояб..2023 15:49:36.632 [SellerTwo] INFO  r.m.h.FunctionAgent - SellerTwo: I was born
+10.нояб..2023 15:49:36.632 [Croupier] INFO  r.m.h.FunctionAgent - Croupier: I was born
+10.нояб..2023 15:49:36.632 [SellerOne] INFO  r.m.h.FunctionAgent - SellerOne: I was born
+10.нояб..2023 15:49:36.656 [Croupier] INFO  r.m.h.c.StartAuctionBehaviour - Auction was Started!
+10.нояб..2023 15:49:36.665 [SellerOne] INFO  r.m.h.s.SendAnswerBehaviour - SellerOne: my Bet = -74
+10.нояб..2023 15:49:36.668 [SellerTwo] INFO  r.m.h.s.SendAnswerBehaviour - SellerTwo: my Bet = -193
+10.нояб..2023 15:49:36.676 [Croupier] WARN  r.m.h.c.WaitForProposesBehaviour - Croupier: Absent need bet more 0
+10.нояб..2023 15:49:36.677 [Croupier] INFO  r.m.h.FailBehaviour - Croupier: Auction was failed
+10.нояб..2023 15:49:46.671 [Croupier] INFO  r.m.h.FailBehaviour - Croupier: Auction was failed!
+10.нояб..2023 15:50:01.224 [SellerTwo] INFO  r.m.h.FunctionAgent - SellerTwo: I was born
+10.нояб..2023 15:50:01.224 [SellerOne] INFO  r.m.h.FunctionAgent - SellerOne: I was born
+10.нояб..2023 15:50:01.224 [Croupier] INFO  r.m.h.FunctionAgent - Croupier: I was born
+10.нояб..2023 15:50:01.248 [Croupier] INFO  r.m.h.c.StartAuctionBehaviour - Auction was Started!
+10.нояб..2023 15:50:01.258 [SellerTwo] INFO  r.m.h.s.SendAnswerBehaviour - SellerTwo: my Bet = -349
+10.нояб..2023 15:50:01.259 [SellerOne] INFO  r.m.h.s.SendAnswerBehaviour - SellerOne: my Bet = -357
+10.нояб..2023 15:50:01.267 [Croupier] WARN  r.m.h.c.WaitForProposesBehaviour - Croupier: Absent need bet more 0
+10.нояб..2023 15:50:01.268 [Croupier] INFO  r.m.h.FailBehaviour - Croupier: Auction was failed

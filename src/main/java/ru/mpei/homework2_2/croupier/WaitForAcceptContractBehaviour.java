@@ -1,13 +1,13 @@
-package ru.mpei.homework2.croupier;
+package ru.mpei.homework2_2.croupier;
 
 import jade.core.behaviours.Behaviour;
 import jade.core.behaviours.ParallelBehaviour;
 import lombok.extern.slf4j.Slf4j;
-import ru.mpei.homework2.FailBehaviour;
-import ru.mpei.homework2.SuccessBehaviour;
-import ru.mpei.homework2.croupier.helper.behaviour.WaitAnswerContractAndReject;
-import ru.mpei.homework2.croupier.helper.behaviour.WaitAnswerContractBehaviour;
-import ru.mpei.homework2.croupier.helper.behaviour.WaitBehaviour;
+import ru.mpei.homework2_2.FailBehaviour;
+import ru.mpei.homework2_2.SuccessBehaviour;
+import ru.mpei.homework2_2.croupier.helper.behaviour.WaitAnswerContractAndReject;
+import ru.mpei.homework2_2.croupier.helper.behaviour.WaitAnswerContractBehaviour;
+import ru.mpei.homework2_2.croupier.helper.behaviour.WaitBehaviour;
 
 
 /**
@@ -33,10 +33,11 @@ public class WaitForAcceptContractBehaviour extends ParallelBehaviour {
     @Override
     public int onEnd() {
         if (receiveBeh.done()){
-            return 2;
+            myAgent.addBehaviour(new SuccessBehaviour());
         }else{
-            return 1;
+            myAgent.addBehaviour(new FailBehaviour("Auction was failed!"));
         }
+        return 0;
     }
 
 }

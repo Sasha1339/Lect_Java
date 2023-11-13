@@ -2,9 +2,11 @@ package ru.mpei.homework2;
 
 import jade.core.Agent;
 import lombok.extern.slf4j.Slf4j;
+import ru.mpei.homework2.croupier.CroupierBehaviourFSM;
 import ru.mpei.homework2.croupier.StartAuctionBehaviour;
 import ru.mpei.homework2.croupier.WaitForAcceptContractBehaviour;
 import ru.mpei.homework2.croupier.WaitForProposesBehaviour;
+import ru.mpei.homework2.sellers.SellerBehaviourFSM;
 import ru.mpei.homework2.sellers.WaitForContractBehaviour;
 import ru.mpei.homework2.sellers.WaitForInvite;
 
@@ -19,12 +21,9 @@ public class FunctionAgent extends Agent {
         AgentService.registerAgent(this, "Auction");
 
         if (this.getLocalName().equals("Croupier")){
-            this.addBehaviour(new StartAuctionBehaviour());
-            this.addBehaviour(new WaitForProposesBehaviour());
-            this.addBehaviour(new WaitForAcceptContractBehaviour());
+            this.addBehaviour(new CroupierBehaviourFSM());
         } else {
-            this.addBehaviour(new WaitForInvite());
-            this.addBehaviour(new WaitForContractBehaviour());
+            this.addBehaviour(new SellerBehaviourFSM());
         }
 
 
