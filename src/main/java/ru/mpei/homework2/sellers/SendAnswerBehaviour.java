@@ -5,6 +5,7 @@ import jade.core.behaviours.OneShotBehaviour;
 import jade.lang.acl.ACLMessage;
 import lombok.extern.slf4j.Slf4j;
 import ru.mpei.homework2.AgentService;
+import ru.mpei.homework2.sellers.helper.behaviour.InfoCroupier;
 
 import java.util.List;
 
@@ -13,27 +14,24 @@ import java.util.List;
  */
 @Slf4j
 public class SendAnswerBehaviour extends OneShotBehaviour {
-    int bet;
-    String nameCroupier;
 
-    public SendAnswerBehaviour(int bet, String nameCroupier) {
-        this.bet = bet;
-        this.nameCroupier = nameCroupier;
+    InfoCroupier infoCroupier;
+
+    public SendAnswerBehaviour(InfoCroupier infoCroupier) {
+        this.infoCroupier = infoCroupier;
     }
     @Override
     public void action() {
-        System.out.println("Z dksdvs");
         ACLMessage sendMessage = new ACLMessage(ACLMessage.REQUEST);
         List<AID> aids = AgentService.findAgents(myAgent, "Auction");
 
         aids.stream()
-                .filter(aid -> aid.getName().equals(nameCroupier))
+                .filter(aid -> aid.getName().equals(infoCroupier.getNameCroupier()))
                 .forEach(aid -> sendMessage.addReceiver(aid));
 
 
-
+        int bet;
         int choice = (int)(Math.random() * 3);
-        System.out.println(choice);
         switch (choice){
             case 0:
             {

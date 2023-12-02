@@ -5,6 +5,7 @@ import jade.core.behaviours.OneShotBehaviour;
 import jade.lang.acl.ACLMessage;
 import lombok.extern.slf4j.Slf4j;
 import ru.mpei.homework2.AgentService;
+import ru.mpei.homework2.croupier.helper.behaviour.WhoIsWinner;
 
 import java.util.List;
 
@@ -17,9 +18,10 @@ public class SendContractBehaviour extends OneShotBehaviour {
     private String nameWinner;
     private String nameLocal;
 
-    public SendContractBehaviour(String nameWinner, String nameLocal) {
-        this.nameWinner = nameWinner;
-        this.nameLocal = nameLocal;
+    private WhoIsWinner whoIsWinner;
+
+    public SendContractBehaviour(WhoIsWinner whoIsWinner) {
+        this.whoIsWinner = whoIsWinner;
     }
 
     @Override
@@ -30,16 +32,16 @@ public class SendContractBehaviour extends OneShotBehaviour {
         List<AID> aids = AgentService.findAgents(myAgent, "Auction");
 
         aids.stream()
-                .filter(aid -> aid.getName().equals(nameWinner))
+                .filter(aid -> aid.getName().equals(whoIsWinner.getNameWinner()))
                 .forEach(aid -> messageWinner.addReceiver(aid));
 
         aids.stream()
                 .filter(aid -> !aid.getName().equals(myAgent.getName()))
-                .filter(aid -> !aid.getName().equals(nameWinner))
+                .filter(aid -> !aid.getName().equals(whoIsWinner.getNameWinner()))
                 .forEach(aid -> messageFail.addReceiver(aid));
 
         messageWinner.setContent("You win! Give me contract");
-        log.info(myAgent.getLocalName()+": "+nameLocal+" you win!");
+        log.info(myAgent.getLocalName()+": "+whoIsWinner.getNameLocalWinner()+" you win!");
         messageFail.setContent("You lose! You lohonulsya!");
         myAgent.send(messageWinner);
         myAgent.send(messageFail);

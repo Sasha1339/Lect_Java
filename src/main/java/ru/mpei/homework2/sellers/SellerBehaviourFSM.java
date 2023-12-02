@@ -26,16 +26,17 @@ public class SellerBehaviourFSM extends FSMBehaviour {
     public void onStart() {
         InfoCroupier infoCroupier = new InfoCroupier();
         this.registerFirstState(new WaitForInvite(infoCroupier), FIRST_STATE);
-        this.registerState(new SendAnswerBehaviour(infoCroupier.getBet(), infoCroupier.getNameCroupier()), SEND_ANSWER);
+        this.registerState(new SendAnswerBehaviour(infoCroupier), SEND_ANSWER);
         this.registerState(new WaitForContractBehaviour(),WAIT_CONTRACT);
-        this.registerLastState(new SendContractYouWin(infoCroupier.getNameCroupier()), SEND_CONTRACT_WIN);
-        this.registerLastState(new SendContractWinAndReject(infoCroupier.getNameCroupier()), SEND_CONTRACT_WIN_REJ);
+        this.registerLastState(new SendContractYouWin(infoCroupier), SEND_CONTRACT_WIN);
+        this.registerLastState(new SendContractWinAndReject(infoCroupier), SEND_CONTRACT_WIN_REJ);
         this.registerLastState(new FailBehaviour("I was failed auction!"), FAIL);
 
         this.registerDefaultTransition(FIRST_STATE, SEND_ANSWER);
         this.registerDefaultTransition(SEND_ANSWER, WAIT_CONTRACT);
         this.registerTransition(WAIT_CONTRACT, SEND_CONTRACT_WIN, 0);
         this.registerTransition(WAIT_CONTRACT, SEND_CONTRACT_WIN_REJ, 1);
+        this.registerTransition(WAIT_CONTRACT, FAIL, 2);
         this.registerTransition(WAIT_CONTRACT, FAIL, 3);
     }
 }

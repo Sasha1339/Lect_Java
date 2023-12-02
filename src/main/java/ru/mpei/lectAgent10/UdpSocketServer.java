@@ -1,4 +1,4 @@
-package ru.mpei.lectAgent5;
+package ru.mpei.lectAgent10;
 
 import lombok.SneakyThrows;
 

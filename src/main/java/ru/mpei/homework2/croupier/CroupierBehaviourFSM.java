@@ -21,7 +21,7 @@ public class CroupierBehaviourFSM extends FSMBehaviour {
         WhoIsWinner whoIsWinner = new WhoIsWinner();
         this.registerFirstState(new StartAuctionBehaviour(), FIRST_STATE);
         this.registerState(new WaitForProposesBehaviour(whoIsWinner), WAIT_PROPOSES);
-        this.registerState(new SendContractBehaviour(whoIsWinner.getNameWinner(), whoIsWinner.getNameLocalWinner()),SEND_CONTRACT);
+        this.registerState(new SendContractBehaviour(whoIsWinner) ,SEND_CONTRACT);
         this.registerState(new WaitForAcceptContractBehaviour(), WAIT_ACCEPT);
         this.registerLastState(new FailBehaviour("Auction was failed"), FAIL);
         this.registerLastState(new SuccessBehaviour(), SUCCESS);

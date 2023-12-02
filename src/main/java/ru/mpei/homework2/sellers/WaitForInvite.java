@@ -16,6 +16,8 @@ public class WaitForInvite extends Behaviour {
     private int number;
     private InfoCroupier infoCroupier;
 
+    private boolean isDone = false;
+
     public WaitForInvite(InfoCroupier infoCroupier) {
         this.infoCroupier = infoCroupier;
     }
@@ -26,6 +28,7 @@ public class WaitForInvite extends Behaviour {
         if (message != null){
             infoCroupier.setNameCroupier(message.getSender().getName());
             log.info("I'm understand!");
+            isDone = true;
         }else {
             block();
         }
@@ -34,6 +37,6 @@ public class WaitForInvite extends Behaviour {
 
     @Override
     public boolean done() {
-        return false;
+        return isDone;
     }
 }

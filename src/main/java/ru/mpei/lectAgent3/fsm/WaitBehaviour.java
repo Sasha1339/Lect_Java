@@ -38,7 +38,7 @@ public class WaitBehaviour extends ParallelBehaviour {
                     try {
                         price = Double.parseDouble(stringP);
                     } catch (NumberFormatException e) {
-                        log.warn("Авдаыдва");
+                        //log.warn("Авдаыдва");
                     }
                     if (price > 0 && price < bestPrice) {
                         bestPrice = price;

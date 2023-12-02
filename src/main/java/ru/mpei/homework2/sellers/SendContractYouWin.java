@@ -5,6 +5,7 @@ import jade.core.behaviours.OneShotBehaviour;
 import jade.lang.acl.ACLMessage;
 import lombok.extern.slf4j.Slf4j;
 import ru.mpei.homework2.AgentService;
+import ru.mpei.homework2.sellers.helper.behaviour.InfoCroupier;
 
 import java.util.List;
 
@@ -14,10 +15,11 @@ import java.util.List;
 @Slf4j
 public class SendContractYouWin extends OneShotBehaviour {
 
-    private String nameCroupier;
 
-    public SendContractYouWin(String nameCroupier) {
-        this.nameCroupier = nameCroupier;
+    private InfoCroupier infoCroupier;
+
+    public SendContractYouWin(InfoCroupier infoCroupier) {
+        this.infoCroupier = infoCroupier;
     }
     @Override
     public void action() {
@@ -25,7 +27,7 @@ public class SendContractYouWin extends OneShotBehaviour {
         List<AID> aids = AgentService.findAgents(myAgent, "Auction");
 
         aids.stream()
-                .filter(aid -> aid.getName().equals(nameCroupier))
+                .filter(aid -> aid.getName().equals(infoCroupier.getNameCroupier()))
                 .forEach(aid -> message.addReceiver(aid));
 
         message.setContent("Contract!");
